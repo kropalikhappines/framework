@@ -1,6 +1,6 @@
 from wsgiref.simple_server import make_server
 from main.setting_frame import Application
-from url import routes
+from view import routes
 
 
 application = Application(routes)

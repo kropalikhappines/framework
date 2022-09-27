@@ -1,0 +1,33 @@
+
+{% extends "base_index.html" %}
+{% block title %}
+  simplestyle_banner - another page
+{% endblock %}
+{% block style %}
+	{% include "style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "main_menu.html" %}
+{% endblock %}
+{% block body %}
+	<div id="site_content">
+
+		<div id="content">
+		<a href="/create_category/">Create new category</a>
+
+			<h2>Lists category</h2>
+			<ul>
+				{% for item in object_list%}
+				<li>
+					{{item.name}}
+					<a href="/category_course/?id={{item.id}}">Course</a>
+				</li>
+        		{% endfor %}
+
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+{% block footer %}
+	{% include "footers.html" %}
+{% endblock %}

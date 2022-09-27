@@ -1,0 +1,24 @@
+{% extends "base_index.html" %}
+{% block title %}
+  simplestyle_banner - contact us
+{% endblock %}
+{% block style %}
+	{% include "style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "main_menu.html" %}
+{% endblock %}
+{% block body %}
+    <div id="site_content">
+        <div id="content">
+            <form method="post" class="form_settings">
+                <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
+                <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Save" /></p>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+	{% include "footers.html" %}
+{% endblock %}
